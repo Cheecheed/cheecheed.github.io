@@ -1,14 +1,14 @@
-$(".home-image").on("click", function () {
+$(".home-image.rl").on("click", function () {
   $(".home-image.rl").css({ "grid-column": "2/5" });
   $(".rl.descript").css({ display: "block" });
 });
-$(".home-image").on("click", function () {
+$(".home-image.html").on("click", function () {
   $(".home-image.html").css({ "grid-column": "9/12" });
-  $(".descript").css({ display: "block" });
+  $(".html.descript").css({ display: "block" });
 });
-$(".home-image").on("click", function () {
+$(".home-image.pyth").on("click", function () {
   $(".home-image.pyth").css({ "grid-column": "2/5" });
-  $(".descript").css({ display: "block" });
+  $(".pyth.descript").css({ display: "block" });
 });
 /* controls dropdown Navbar Menu*/
 $(".dropMenu1").on("mouseenter", function () {
