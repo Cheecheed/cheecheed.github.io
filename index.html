@@ -1,73 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
     <fonts here></fonts>
-    <style>
-        
-    </style>
-</head>
-<body>
-<div id="pagelayout">
-  <section class="ma-p-hd">
-    <div class="logo-nav-container">
-      <div class="logo gradient-background">
-        <p>Matts Place</p>
-      </div>
-    <ul>
+    <style></style>
+  </head>
+  <body class="body-background">
+    <!-- Nav Bar Start -->
+    <nav class="navbar nav-background">
+      <logo class="logo logo-background">Matts Place</logo>
       <input type="checkbox" id="checkbox_toggle" />
       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-    
-      <div class="navbar">
-        <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="./pages/projects.html">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#about">About</a></li> 
-        </ul>
-      </div> 
+      <ul id="siteLinks">
+        <li class="siteLink"><a href="index.html">Home</a></li>
+        <li class="siteLink dropMenu1">
+          Projects
+          <ul class="dropdown1">
+            <li><a href="./pages/pyprojects.html">Python</a></li>
+            <li>Web Development</li>
+          </ul>
+        </li>
+        <li class="siteLink dropMenu2">
+          About
+          <ul class="dropdown2">
+            <li>Contact Me</li>
+            <li>Resume</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- Nav Bar END! -->
+    <div class="homeContainer">
+      <img class="home-image rl" src="./images/rllogo.png" />
+      <p class="rl descript">
+        I love Rocket league! Stats:<br />Current Rank: Champ 2(duos)<br />Hours:
+        Around 750 approx.
+      </p>
     </div>
-  </section>
-<div class="container">
-  <section>
-    <div class="pyth">
-      <img class="py-img" src="./images/pytlogo.png" alt="Python Logo">
-      <p class="rf pgraph">Pythons a wonderful programming language I've been
-      using for a few months now! It definitely is good for
-      math, algorithimic calculations on a large scale and
-      (my favorite part!) making logic based games!<br/><br/>
-      See my projects page for descriptions and
-      links to my repositories!!!</p>
+    <div class="homeContainer">
+      <p class="html descript">
+        Html is a great language! Its been fun to learn, can't wait to see
+        better ways to make websites!
+      </p>
+      <img class="home-image html" src="./images/htmllogo.png" />
     </div>
-  </section>
-  <section>
-    <div class="htm">
-      <p class="lf pgraph">Html is another great language! I am still learning
-       the finer aspects of it and including CSS!
-       No projects currently outside of this site you are
-       on now and older versions of said site!</p>
-      <img class="htmimg" src="./images/htmllogo.png" alt="HTML 5 Logo">
-    </div> 
-  </section> 
-  <section>
-    <div class="roc-lea">
-      <img class="rlimg" src="./images/rllogo.png" alt="Rocket league logo">
-      <p class="lf pgraph">Rocket league is a 'soccer' type Esports game where
-      players compete against eachother to score goals.
-      The skill cap on this game is insane. I am
-      currently top 1% at Champion 2 rank!<br/><br/>
-      Cheecheed is my in-game-name! Add me to play!</p>
+    <div class="homeContainer">
+      <img class="home-image pyth" src="./images/pytlogo.png" />
+      <p class="pyth descript">
+        Python's an amazing interpreted langauge! My current skill level is
+        intermediate at best, and I know a little with Flask framework!
+      </p>
     </div>
-  </section>
- </div>
+    <hr />
+    <footer>License(MIT) Created by Matt Diehl</footer>
 
- 
- <footer class="gradient-background fm">©License(MIT). Site created by Matt Diehl</footer>  
-
-
-</body>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

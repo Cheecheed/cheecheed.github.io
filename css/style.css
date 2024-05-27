@@ -1,196 +1,175 @@
-*{
-    margin: 0;
-    padding: 0;
-   }
-.ma-p-hd {
- position: sticky;
- top: 0;
- margin-bottom: 2rem;
- z-index: 1;
+* {
+  margin: 0;
+  padding: 0;
 }
-#pagelayout{
-    height: 100%;
-    height: 100%;
-    background-color:#4c516b;
-    color:rgb(255, 255, 255);
-    font-size: large;
-    
-   }
-   .logo {
-     display: flex;
-     width: 8rem;
-     justify-content: center;
-     align-items: center;
-     color:rgb(0, 0, 0);
-     font-weight: bolder;
-     font-size: larger;
-     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   }
-   .navbar > ul {
-     display: flex;
-     position: relative;
-     list-style-type: none;
-     margin-bottom:0;
-     padding: 0;
-     overflow: hidden;
-     background-color: #58659c;
-   }
-   
-   .navbar ul li {
-     float:left;
-   }
-   
-   .navbar ul li a {
-     display: block;
-     color: white;
-     text-align: center;
-     padding: 14px 16px;
-     text-decoration: none;
-   }
-   
-   .navbar ul li a:hover {
-     background-color: #203a80;
-   }
-   .active {
-     background-color: #2a39be;
-   }
-   .logo-nav-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #58659c;
-   }
-   .container {
+.nav-background {
+  background: linear-gradient(300deg, #6a1ea8, #9080a3, #6a1ea8);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+.logo-background {
+  background: linear-gradient(300deg, #6a1ea8, #490107, #6a1ea8);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+.body-background {
+  background: linear-gradient(300deg, #6a1ea8, #490107, #6a1ea8);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Start of Nav Bar display */
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  justify-items: flex-end;
+  position: sticky;
+  top: 0;
+  margin-bottom: 3rem;
+}
+/*Logo display*/
+.logo {
+  font-weight: bolder;
+  font-size: 130%;
+  text-align: center;
+  justify-self: flex-start;
+  color: #fdfcff;
+  padding: 0.5rem;
+  text-wrap: nowrap;
+}
+/*Container of all list items*/
+#siteLinks {
+  text-align: center;
+  font-size: 130%;
+  font-weight: bold;
+  justify-self: start;
+  list-style: none;
+  color: white;
+}
+#siteLinks a {
+  text-decoration: none;
+  color: white;
+}
+/*Actual list items*/
+.siteLink {
+  display: inline-block;
+  padding-right: 0.5rem;
+  padding: 0.5rem;
+  height: auto;
+  position: relative;
+}
+
+.siteLink:hover {
+  background-color: #6a1ea8;
+}
+.dropdown1 {
+  display: none;
+  list-style: none;
+  position: absolute;
+  margin: 0.5rem;
+}
+.dropdown1 > li {
+  padding: 0.25rem;
+  background-color: #8e52be;
+}
+.dropdown1 > li:hover {
+  background-color: #6a1ea8;
+}
+.dropdown2 {
+  display: none;
+  list-style: none;
+  position: absolute;
+  margin: 0.5rem;
+}
+.dropdown2 > li {
+  padding: 0.25rem;
+  background-color: #8e52be;
+}
+.dropdown2 > li:hover {
+  background-color: #6a1ea8;
+}
+/* End of list items*/
+
+/*hamburger dropdown */
+.hamburger {
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+/* end of hamburger dropdown */
+
+/*Start of RL Image*/
+.homeContainer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.home-image {
+  max-width: 100%;
+  max-height: 100%;
+  grid-column: 5/8;
+}
+/* Start of RL paragraph + descript */
+.descript {
+  display: none;
+  margin: 0.5rem;
+  grid-column: span 4;
+  font-size: 2rem;
+  align-content: center;
+}
+p.html {
+  grid-column: 5/9;
+}
+
+footer {
+  padding: 1rem;
+}
+/* Media for Cellphones */
+@media (max-width: 768px) {
+  #siteLinks {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    font-weight: bolder;
+    font-size: 180%;
+  }
+  input[type="checkbox"]:checked ~ #siteLinks {
     display: flex;
     flex-direction: column;
-    justify-content:flex-end;
-    padding: 100px;
-   }
-   .pyth {
-    display: flex;
-    flex-direction: row;
-    justify-content:flex-start;
-    align-content: center;
-    margin-bottom: 50px;
-   }
-   .py-img {
-    max-height: 18rem;
-    overflow: hidden;
-    margin: 10px;
-   }
-  .rf {
-   position: relative;
-   top: 50px;
-   text-align: left;
-   float:right;
+    justify-self: left;
+
+    background-color: purple;
+    top: 2.5rem;
+    right: 1.5rem;
+    border-radius: 10px;
   }
-  .lf {
-   position: relative;
-   top: 50px;
-   text-align: left;
-   float:left;
+  .dropdown1 {
+    left: 5rem;
+    top: -0.5rem;
   }
-  .htm {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-content: center;
-    margin-bottom: 50px;
-   }
-  .htmimg {
-    max-height: 18rem;
-    
-    overflow: hidden;
-    margin-left: 10px;
-   }
-   .rlimg {
-    max-height: 18rem;
-    
-    overflow: hidden;
-    margin: 10px;
-   }
-   .roc-lea {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-content: center;
-    margin-bottom: 10px;
-   }
-  .fm{
-   padding:20px
+  .dropdown2 {
+    left: 5rem;
+    top: -0.5rem;
   }
-  input[type=checkbox] {
-  display: none;
-  } 
-  .hamburger {
+  .descript {
     display: none;
-    font-size: 24px;
-    user-select: none;
+    margin: 0.5rem;
+    grid-column: span 6;
+    font-size: 1.2rem;
+    align-content: center;
   }
-   
-   .gradient-background {
-     background: linear-gradient(300deg, #939ecf, #58659c, #969fc9);
-     background-size: 180% 180%;
-     animation: gradient-animation 18s ease infinite;
-   }
-   @keyframes gradient-animation {
-     0% {
-       background-position: 0% 50%;
-     }
-     50% {
-       background-position: 100% 50%;
-     }
-     100% {
-       background-position: 0% 50%;
-     }
-   }
-   @media (max-width: 768px){
-    .roc-lea {
-        display: flex;
-        flex-direction: column;
-     }
-     .pgraph {
-      margin-bottom:15px ;
-     }
-     .htm {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: flex-start;
-     }
-     .pyth {
-        display: flex;
-        flex-direction: column;
-     }
-     .rf {
-     position: relative;
-     top: 10px;
-     
-    }
-    .lf {
-     position: relative;
-     top: 10px;
-    }
-    .logo-nav-container {
-       min-height: 3rem;
-      
-     }
-     .hamburger {
-        display: block;
-      }
-    .navbar {
-      display: none;
-      position: absolute;
-      justify-content: flex-end;
-      top:0;
-      right:0;
-      left:0;
-      text-align: center;
-    }
-    input[type=checkbox]:checked ~ .navbar {
-        display: flex;
-      }
-    
-    
-    
-   }
-   
+}
+/* End Media for Cellphones */
