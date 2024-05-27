@@ -13,7 +13,7 @@
   animation: gradient-animation 18s ease infinite;
 }
 .body-background {
-  background: linear-gradient(300deg, #6a1ea8, #490107, #6a1ea8);
+  background: linear-gradient(300deg, #3e3447, #7b4fb4, #382e3f);
   background-size: 180% 180%;
   animation: gradient-animation 18s ease infinite;
   height: 100vh;
