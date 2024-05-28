@@ -1,11 +1,10 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 .nav-background {
-  background: linear-gradient(300deg, #6a1ea8, #9080a3, #6a1ea8);
-  background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
+  box-shadow: 0px 0px 3px #1b1c1d;
 }
 .logo-background {
   background: linear-gradient(300deg, #6a1ea8, #490107, #6a1ea8);
@@ -16,9 +15,8 @@
   background: linear-gradient(300deg, #3e3447, #7b4fb4, #382e3f);
   background-size: 180% 180%;
   animation: gradient-animation 18s ease infinite;
-  height: 100vh;
+  height: 100dvh;
 }
-
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
