@@ -9,10 +9,10 @@
 .break {
   margin-left: 0rem !important;
 }
-.resume ul {
+.reslist {
   line-height: 1.4rem;
 }
-.resume ul li {
+.reslist li {
   font-size: large;
 }
 .resume-background {
