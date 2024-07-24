@@ -4,7 +4,16 @@
   box-sizing: border-box;
 }
 .resume {
-  margin-left: 0.2rem;
+  margin-left: 0.5rem;
+}
+.break {
+  margin-left: 0rem !important;
+}
+.resume ul {
+  line-height: 1.4rem;
+}
+.resume ul li {
+  font-size: large;
 }
 .resume-background {
   background-color: lightslategrey;
