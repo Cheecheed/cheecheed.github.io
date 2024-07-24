@@ -9,12 +9,6 @@
 .break {
   margin-left: 0rem !important;
 }
-.reslist {
-  line-height: 1.4rem;
-}
-.reslist li {
-  font-size: large;
-}
 .resume-background {
   background-color: lightslategrey;
 }
@@ -114,6 +108,12 @@
   background-color: #6a1ea8;
 }
 /* End of list items*/
+.reslist {
+  line-height: 1.4rem;
+}
+.reslist li {
+  font-size: large;
+}
 
 /*hamburger dropdown */
 .hamburger {
