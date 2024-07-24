@@ -110,6 +110,7 @@
 /* End of list items*/
 .reslist {
   line-height: 1.4rem;
+  list-style: armenian !important;
 }
 .reslist li {
   font-size: large;
